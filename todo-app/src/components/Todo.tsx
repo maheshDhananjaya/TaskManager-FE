@@ -3,7 +3,7 @@ import TodoItem from "./TodoItem";
 
 interface ITask {
   title: string;
-  description: String;
+  description: string;
   id: string;
 }
 

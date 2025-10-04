@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 const SearchTask = () => {
@@ -50,9 +51,10 @@ const SearchTask = () => {
         </div>
       )}
       <div className="mt-1">
-        <a href="/" className="underline">
+        {/* <a href="/" className="underline">
           create a task here
-        </a>
+        </a> */}
+        <Link href={"/"}>create a task here</Link>
       </div>
     </div>
   );
