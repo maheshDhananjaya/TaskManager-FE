@@ -11,15 +11,13 @@ const Todo = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [todoList, setTodoList] = useState<ITask[]>([]);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   const handleTaskDelete = async (taskId: string) => {
     try {
-      const response = await fetch(
-        `http://localhost:4000/api/todos/${taskId}`,
-        {
-          method: "delete",
-        }
-      ).then((res) => {
+      const response = await fetch(`${API_URL}/api/todos/${taskId}`, {
+        method: "delete",
+      }).then((res) => {
         if (res.ok) {
           getTaskList();
         }
@@ -31,7 +29,7 @@ const Todo = () => {
 
   const getTaskList = async () => {
     try {
-      const response = await fetch("http://localhost:4000/api/todos", {
+      const response = await fetch(`${API_URL}/api/todos`, {
         method: "get",
       });
       const data = await response.json();
@@ -56,7 +54,7 @@ const Todo = () => {
     setDescription("");
 
     try {
-      const response = await fetch("http://localhost:4000/api/todos", {
+      const response = await fetch(`${API_URL}/api/todos`, {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(request),
