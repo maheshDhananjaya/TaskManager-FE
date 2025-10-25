@@ -7,7 +7,6 @@ const LoginPage:FC = ()=>{
     const router = useRouter();
     const handleSubmit = (e:FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
-        console.log("form submitted")
         router.push("/search")
     }
     return (
