@@ -2,6 +2,7 @@ import React, {FC, FormEvent, useState} from "react";
 import {useRouter} from "next/router";
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "@/lib/firebase";
+import Link from "next/link";
 
 const LoginPage: FC = () => {
     const [email, setEmail] = useState("");
@@ -32,6 +33,14 @@ const LoginPage: FC = () => {
                 <button className="border rounded-md px-4 py-2 bg-amber-500 cursor-pointer" type="submit">Submit
                 </button>
             </form>
+            <div className={"flex flex-row justify-between"}>
+                <Link href="/sign-up" className={""}>
+                <span className={"text-md text-red-500 underline"}>sing up</span>
+                </Link>
+                <Link href="/forget-password">
+                <span className={"text-red-500 text-md underline"}>forget password?</span>
+                </Link>
+            </div>
         </div>
     )
 }
