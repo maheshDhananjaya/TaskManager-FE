@@ -1,2 +1,2 @@
 **Task Manger App**
- - createed using NextJs, Typescript, Tailwind, Firebase(authentication)
+ - created using NextJs, Typescript, Tailwind, Firebase(authentication)
