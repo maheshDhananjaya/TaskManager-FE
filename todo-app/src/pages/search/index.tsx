@@ -54,7 +54,7 @@ const SearchTask = () => {
         {/* <a href="/" className="underline">
           create a task here
         </a> */}
-        <Link href={"/create-task"} className={"underline"}>create a task here</Link>
+        <Link href={"/create-task"} className={"underline"}>create a task here:</Link>
       </div>
     </div>
   );
